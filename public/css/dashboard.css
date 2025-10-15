@@ -1,0 +1,75 @@
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    /* background-image: url("{{ asset('images/background.jpg') }}"); */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    margin: 0; 
+    padding: 0;
+}
+
+.card {
+    background-color: #6983f9;
+    margin-top: 5%;
+    flex: auto;
+    flex-shrink: 0;
+    max-width: 50vh; 
+    background: transparent;
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+.card-hover:hover {
+    transform: scale(1.05); /* Scale up the card on hover */
+    transition: transform 0.3s ease-in-out; /* Ensure smooth transition */
+}
+
+.scroll {
+    flex: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    white-space: nowrap; /* Prevent wrapping to new line */
+    padding-bottom: 10px; /* Add some padding to avoid overlapping with arrows */
+}
+
+.container {
+    text-align: center;
+    position: relative; /* Ensure arrows are positioned relative to this container */
+}
+
+.intro {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: slideInTitle 1s ease-in-out forwards;
+    animation-delay: 0.5s; /* Delay title animation */
+}
+
+.intro h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    opacity: 0;
+    animation: slideInSubtitle 1s ease-in-out forwards;
+    animation-delay: 1s; /* Delay subtitle animation */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideInTitle {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInSubtitle {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}

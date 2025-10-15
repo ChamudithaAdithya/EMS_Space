@@ -1,0 +1,5 @@
+.modal-dialog {
+    display: flex;
+    align-items: center; /* Center vertically */
+    min-height: calc(90% - 1rem); /* Adjust height if needed */
+}

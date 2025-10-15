@@ -1,0 +1,78 @@
+ .nav-link{
+    font-size: 17px;
+    color: #fff;
+    opacity: 0.85;
+    font-weight: 500;
+    margin-right: 40px;
+    position: relative;
+    font-family: poppins;
+    display: flex;
+}
+
+/* .nav-item>a:hover {
+    color: #150365;
+    font-weight: 600;
+    opacity: 1;      
+} */
+
+.active {
+    color:#1c324b !important;
+    font-weight: 700;  
+}
+
+.dropdown_active{
+    background: #bed4ff;   
+}
+
+
+/* .nav-link::after{
+    content: '';
+    opacity: 0;
+    transition: all 0.2s;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    position: absolute; nav link dropdown
+    bottom: 0;
+    left: 0;
+} */
+
+
+.nav-link:hover::after{
+    opacity: 1;
+}
+
+
+.profile{
+    color: #1c324b;
+}
+
+
+
+/* Base style for .nav-link::after (hidden initially) */
+.nav-item > .nav-link::after {
+    content: '';
+    opacity: 0; /* Initially hidden */
+    transition: all 0.2s;
+    height: 2px;
+    width: 100%;
+    background: #1c324b;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Hover effect on .nav-item to display underline */
+/* .nav-item:hover > .nav-link::after, */
+.nav-item > .nav-link.active::after { /* Assuming .active class is used for the active state */
+    opacity: 1; /* Make it visible */
+}
+
+/* Additional styles for the link in hover and active states */
+.nav-item > .nav-link:hover,
+.nav-item > .nav-link.active {
+    color: #150365;
+    font-weight: 600;
+    opacity: 1;
+    position: relative; /* Needed to ensure the pseudo-element is positioned correctly */
+}
